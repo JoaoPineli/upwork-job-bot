@@ -2,6 +2,8 @@ from discord.ext import tasks
 import discord
 import get_contracts
 import datetime
+import os
+
 
 def filter_new_entries(current_entries, new_entries):
     current_ids = [entry.id for entry in current_entries]
@@ -35,4 +37,4 @@ intents = discord.Intents.default()
 intents.message_content = True
 
 client = Client(intents=intents)
-client.run('MTEyMTQ1NjI4MjI3NzI2OTUzNA.G87McX.vmA4ZMCjEwOos7xFTzIY5eqat9KvZfr-P0Wlbo')
+client.run(os.environ['DISCORD_BOT_TOKEN'])
