@@ -1,4 +1,4 @@
 env
-*.txt
+upwork*.txt
 test.py
 __pycache__/
